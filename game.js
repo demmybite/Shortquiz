@@ -7,44 +7,19 @@ let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
-let questions = [
-  {
-    question: "Can coronavirus be transmitted from person to person?",
-    choice1: "no",
-    choice2: "yes",
-    choice3: "well, maybe",
-    answer: 2,
-  },
-  {
-    question:
-      "What can I do to protect myself from contracting the novel coronavirus?",
-    choice1: "maintaining basic hand hygiene and avoiding close contact",
-    choice2: "going to parties and not obeying the government orders",
-    choice3: "visiting friends and loved ones during lockdown",
-    answer: 1,
-  },
-  {
-    question: "Is there a vaccine for the novel coronavirus?",
-    choice1: "yes: A vaccine has been announced by WHO",
-    choice2: "no: None yet",
-    choice3: "well, maybe",
-    answer: 2,
-  },
-  {
-    question: "The following are symptoms of coronavirus except?",
-    choice1: "fever",
-    choice2: "difficulty in breathing",
-    choice3: "skin rashes",
-    answer: 3,
-  },
-  {
-    question: "Where Can I Get Updated Information on Coronavirus (COVID-19)?",
-    choice1: "NCDC and WHO",
-    choice2: "OAU and NAFDAC",
-    choice3: "NYSC and FRSC",
-    answer: 1,
-  },
-];
+let questions = [];
+
+fetch("questions.json")
+  .then((res) => {
+    return res.json();
+  })
+  .then((res) => {
+    questions = res;
+    startQuiz();
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 const correctAnswer = 1;
 const maximumQuestions = 5;
@@ -106,5 +81,3 @@ incrementScore = (num) => {
   score += num;
   scoreText.innerText = score;
 };
-
-startQuiz();
