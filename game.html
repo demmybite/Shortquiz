@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="game.css" />
+    <title>Short Quiz!-Play</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="game" class="justify-center flex-column">
+        <div id="hud">
+          <div id="hud-item">
+            <p class="hud-prefix">Score</p>
+            <h1 class="hud-main-text" id="score">0</h1>
+          </div>
+        </div>
+        <h2 id="question">
+          What measure can we take to reduce the spread of covid-19
+        </h2>
+        <div class="choice-container">
+          <p class="choice-prefix">A.</p>
+          <p class="choice-text" data-number="1">
+            washind hands with soap and aplying sanitizers
+          </p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">B.</p>
+          <p class="choice-text" data-number="2">going out to meet friends</p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">C.</p>
+          <p class="choice-text" data-number="3">
+            partying and organizing get together
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>

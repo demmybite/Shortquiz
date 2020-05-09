@@ -1,0 +1,39 @@
+.choice-container {
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 1.5rem;
+  border: 0.1rem solid white;
+  background-color: honeydew;
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 cornflowerblue;
+}
+
+.choice-prefix {
+  padding: 1.5rem 2.5rem;
+  background-color: cornflowerblue;
+  color: lavender;
+}
+
+.choice-text {
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.correct {
+  background-color: green;
+  color: white;
+}
+
+.incorrect {
+  background-color: red;
+  color: white;
+}
+
+#hud {
+  display: flex;
+  
+}
